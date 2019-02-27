@@ -1,0 +1,28 @@
+  <!-- Post Item  (Card) -->
+  <mat-card class="example-card">
+      <!-- Card header -->
+      <mat-card-header>
+          <img mat-card-avatar class="example-header-image" [src]="post.personImage" >
+        <mat-card-title>{{ post.personName }}</mat-card-title>
+        <mat-card-subtitle>15 mins <i class="fa fa-globe"></i> </mat-card-subtitle>
+      </mat-card-header>
+      <!-- Card Image or Video (Post Image or Video) -->
+      <ng-template [ngIf]="post.postImageOrVideo !== null && post.postImageOrVideo !== ''">
+        <img *ngIf="post.postType === 'image'; else video" mat-card-image [src]="post.postImageOrVideo" alt="There is a problem loading the picture">
+        <ng-template #video>
+          <video mat-card-image controls #video>
+            <source [src]="post.postImageOrVideo" type="video/mp4">
+          </video>
+        </ng-template>
+      </ng-template>
+      <!-- Post Text -->
+      <mat-card-content>
+        <p>{{post.postText}}</p>
+      </mat-card-content>
+      <!-- Post Buttons -->
+      <mat-card-actions>
+        <button fxFlex fxLayoutAlign="flex-start" mat-button>LIKE</button>
+        <button fxFlex fxLayoutAlign="flex-end" mat-button>Comment</button>
+      </mat-card-actions>
+    </mat-card>
+  

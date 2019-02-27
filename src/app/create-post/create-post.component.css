@@ -1,0 +1,50 @@
+/* Create Form Style*/
+
+.docs-example-viewer-wrapper {
+  border: 1px solid rgba(0,0,0,.03);
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  max-width: 100%;
+}
+
+.docs-example-viewer-title {
+  padding: 8px 10px;
+  color: rgba(0,0,0,.70);
+  background: rgba(0,0,0,.03);
+}
+
+.docs-example-viewer-body {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+/* Image Style */
+.avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Inputs Width */
+button, input {
+  width: 100%;
+}
+
+/* Textarea Style */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: .375rem .75rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #495057;
+  overflow: hidden;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  resize: none;
+}

@@ -1,0 +1,58 @@
+<!-- Create Form -->
+<form (ngSubmit)="onSubmit()" [formGroup]="addPostForm">
+<div class="docs-example-viewer-wrapper">
+  <!-- Create Form Header -->
+  <div class="docs-example-viewer-title">
+    Create Post
+  </div>
+  <!-- Create Form Body-->
+  <div class="docs-example-viewer-body">
+    <div fxLayout="column" fxLayoutGap="2%">
+      <div fxFlex="100%" fxLayout>
+        <div fxFlex.gt-xs="10">
+          <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/40243252_1868217356594018_5178546561046544384_n.jpg?_nc_cat=110&_nc_ht=scontent-mxp1-1.xx&oh=98ac2739a8f3a99b55a4920624f62fed&oe=5CE9F812" alt="Avatar" class="avatar">
+        </div>
+        <!-- Textarea -->
+        <div fxFlex.gt-xs="90" fxLayoutAlign="center">
+          <textarea formControlName="postText" class="form-control" placeholder="What's on your mind"></textarea>
+        </div>
+      </div>
+      <div fxFlex="100%">
+        <mat-divider></mat-divider>
+      </div>
+      <!-- Button to toggle Photo/Video Section-->
+      <div fxFlex="100%">
+        <button type="button" mat-button color="accent" (click)="openSection()">Photos/Videos</button>
+      </div>
+      <!-- Add Photo/Video Section-->
+      <div fxFlex="100%" fxLayout fxLayoutGap="2%" *ngIf="openPhotosVideosSection">
+          <mat-radio-group fxFlex formControlName="postType">
+            <mat-radio-button 
+              fxFlex 
+              fxLayoutAlign="center" 
+              value="image">Photo</mat-radio-button>
+            <mat-radio-button 
+              fxFlex 
+              fxLayoutAlign="center" 
+              value="video">Video</mat-radio-button>
+          </mat-radio-group>
+      </div>
+      <!-- Hidden Input for Photo/Video URL-->
+      <mat-form-field fxFlex="100%" *ngIf="openPhotosVideosSection && addPostForm.get('postType').value !== null">
+        <input matInput placeholder="Photo/Video URL" formControlName="postImageOrVideo">
+      </mat-form-field>
+      <div fxFlex="100%">
+        <mat-divider></mat-divider>
+      </div>
+      <!-- Submit Form Button-->
+      <div fxFlex="100%">
+        <button type="submit" 
+                mat-raised-button 
+                color="primary" 
+                [disabled]="!addPostForm.valid">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+

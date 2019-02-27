@@ -1,0 +1,22 @@
+<!-- List of features for the profile -->
+<div fxFlex="70%" fxFlexOffset="10%" fxLayoutAlign="flex-start">
+    <mat-list>
+      <h3 mat-subheader>
+        <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/40243252_1868217356594018_5178546561046544384_n.jpg?_nc_cat=110&_nc_ht=scontent-mxp1-1.xx&oh=98ac2739a8f3a99b55a4920624f62fed&oe=5CE9F812" alt="Avatar" class="avatar">
+        {{ name }}
+      </h3>
+      <!-- First group of features in Feature List -->
+      <mat-list-item *ngFor="let feature of features">
+        <mat-icon mat-list-icon><i [class]="feature.icon"></i></mat-icon>
+        <h4 mat-line>{{feature.name}}</h4>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+      <!-- Second group of features in Feature List -->
+      <h3 mat-subheader>Shortcuts</h3>
+      <mat-list-item *ngFor="let group of shortcuts">
+        <mat-icon mat-list-icon><i [class]="group.icon"></i></mat-icon>
+        <h4 mat-line>{{group.name}}</h4>
+      </mat-list-item>
+    </mat-list>
+  </div>

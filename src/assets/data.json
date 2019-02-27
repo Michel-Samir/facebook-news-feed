@@ -1,0 +1,18 @@
+{
+  "post" : [
+    {
+      "personName" : "Michel Samir", 
+      "personImage": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/40243252_1868217356594018_5178546561046544384_n.jpg?_nc_cat=110&_nc_ht=scontent-mxp1-1.xx&oh=98ac2739a8f3a99b55a4920624f62fed&oe=5CE9F812", 
+      "postText": "Very beautiful grass", 
+      "postType" : "image", 
+      "postImageOrVideo": "https://upload.wikimedia.org/wikipedia/commons/6/68/Grass_dsc08672-nevit.jpg"
+    },
+    {
+      "personName" : "Michel Samir", 
+      "personImage": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/40243252_1868217356594018_5178546561046544384_n.jpg?_nc_cat=110&_nc_ht=scontent-mxp1-1.xx&oh=98ac2739a8f3a99b55a4920624f62fed&oe=5CE9F812", 
+      "postText": "Great! good video", 
+      "postType" : "video", 
+      "postImageOrVideo": "http://techslides.com/demos/sample-videos/small.mp4"
+    }
+  ]
+}

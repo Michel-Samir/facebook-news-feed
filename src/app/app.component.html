@@ -1,0 +1,38 @@
+<!-- Side Nav Container -->
+<mat-sidenav-container>
+  <!-- Side Navigation Page -->
+  <mat-sidenav  #sidenav role="navigation">
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon>face</mat-icon>
+        <span class="nav-caption">Profile</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon>home</mat-icon>
+        <span class="nav-caption">Home</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon><i class="fa fa-user-plus"></i></mat-icon>
+        <span class="nav-caption">Find Friends</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- Main Page (full page) -->
+  <mat-sidenav-content>
+    <div fxLayout="column">
+      <!-- Main Page Header -->
+      <app-header fxFlex [sideNav]="sidenav"></app-header>
+      <div fxFlex fxLayout>
+        <!-- Main Page Features (List) -->
+        <div fxFlex="20%" fxHide.lt-md>
+          <app-features></app-features>
+        </div>
+        <!-- Create New Post and Posts List -->
+        <div fxFlex="40%" fxFlex.lt-md="80%" fxFlexOffset.lt-md="10%" fxLayout="column">
+          <app-create-post fxFlex></app-create-post>
+          <app-post-list fxFlex></app-post-list>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

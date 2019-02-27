@@ -1,0 +1,19 @@
+/* Main page and Side Nav height*/
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+    height: 100%;
+}
+/* Side Nav Width*/
+mat-sidenav {
+    width: 250px;
+}
+
+/* Features List style */
+app-features, app-create-post {
+    margin-top: 20px;
+}
+
+/* Side Nav Style */
+.nav-caption {
+    display: inline-block;
+    padding-left: 20px;
+}
